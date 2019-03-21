@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<!-- {% load staticfiles %} -->
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <title>E-LINK Communication</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+  <link rel="shortcut icon" href="logo.png">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+  <link rel="stylesheet" href= "{% static "css/stylesheet.css" %}"/>
+  <script src="{% static "js/menu.js" %}"></script>
+</head>
+<body>
+  <header class="jumbotron">
+
+<!-- <nav class="navbar navbar-default navar-static-top">
+  <ul class="nav navbar-nav">
+    <li>    <a  href="{% url 'firstapp:index' %}"><img src="{% static "images/logo.png" %}" alt="RTCMultiConnection"></a></li>
+
+  </ul>
+</nav> -->
+
+  <!-- <div class="jumbotron"> -->
+
+    <a class="logo" href="{% url 'firstapp:index' %}"><img src="{% static "images/logo.png" %}" alt="RTCMultiConnection"></a>
+    <a href="{% url 'firstapp:index' %}" class="menu-explorer">Menu<img src="{% static "images/menu-icon.png" %}" alt="Menu"></a>
+    <nav>
+
+      {% if user.is_authenticated %}
+        <li>
+          <a href="{% url 'logout' %}">Logout</a>
+        </li>
+      {% else %}
+        <li>
+          <a href="{% url 'firstapp:user_login' %}">Login</a>
+        </li>
+      {% endif %}
+
+      {% if not user.is_authenticated %}
+      <li>
+        <a href="{% url 'firstapp:signup' %}">Registration</a>
+      </li>
+      {% endif %}
+
+      <li>
+        <a href="{% url 'admin:index' %}">Admin</a>
+      </li>
+      <li>
+        <a href="{% url 'host' %}">Host/Join Room</a>
+      </li>
+      <!-- <li>
+        <a href="{% url 'join' %}">Join Room</a>
+      </li>
+      <li>
+        <a href="{% url 'create' %}">Create Room</a>
+      </li> -->
+    </nav>
+    <!-- </div> -->
+  </header>
+
+
+<!-- <div class="jumbotron"> -->
+
+  <h1 class="jumbotron">
+    E-LINK Communication
+   <!-- <p class="no-mobile">
+     /* Multi-user (many-to-many) video streaming + text chat + file sharing. */
+    </p> -->
+       <p class="no-mobile">
+      Final Year Project (Anas, Waseem, Musab, Usman)
+    </p>
+  </h1>
+
+<!-- </div> -->
+
+{% block body_block %}
+
+{% endblock %}
+
+  <footer >
+    <h1>Pucit Fall 2015 </h1>
+      <p style="font-size:12px ; text-align: center">All rights are reserved : CFCLINK 2019</p>
+  </footer>
+</body>
+</html>
