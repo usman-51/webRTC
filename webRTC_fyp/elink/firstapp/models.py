@@ -24,17 +24,17 @@ class Client(models.Model):
 
 
 
-class Created_Rooms(models.Model):
-    # User= settings.AUTH_USER_MODEL
-    user = models.OneToOneField(User)
+# class Created_Rooms(models.Model):
+#     # User= settings.AUTH_USER_MODEL
+#     user = models.OneToOneField(User)
 
-    # user= models.ForeignKey(User, null=True)
-    name= models.CharField(max_length=500)
+#     # user= models.ForeignKey(User, null=True)
+#     name= models.CharField(max_length=500)
 
-class Joined_Rooms(models.Model):
-    # User= settings.AUTH_USER_MODEL
-    # user= models.ForeignKey(User, null=True)
-    user = models.OneToOneField(User)
-    name= models.CharField(max_length=500)
-    def __str__(self):
-        return self.user.username
+# class Joined_Rooms(models.Model):
+#     # User= settings.AUTH_USER_MODEL
+#     # user= models.ForeignKey(User, null=True)
+#     user = models.OneToOneField(User)
+#     name= models.CharField(max_length=500)
+#     def __str__(self):
+#         return self.user.username
