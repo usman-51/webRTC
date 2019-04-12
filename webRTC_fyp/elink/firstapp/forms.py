@@ -23,12 +23,12 @@ class clientForm(forms.ModelForm ):
         model= Client
         fields = '__all__'
 
-class Created_RoomsForm(forms.ModelForm ):
-    class Meta:
-        model= Created_Rooms
-        fields = '__all__'
+# class Created_RoomsForm(forms.ModelForm ):
+#     class Meta:
+#         model= Created_Rooms
+#         fields = '__all__'
 
-class Joined_RoomsForm(forms.ModelForm ):
-    class Meta:
-        model= Joined_Rooms
-        fields = '__all__'
+# class Joined_RoomsForm(forms.ModelForm ):
+#     class Meta:
+#         model= Joined_Rooms
+#         fields = '__all__'
