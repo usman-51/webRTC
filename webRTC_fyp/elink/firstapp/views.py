@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse, HttpResponseRedirect
-from firstapp.models import Client,Created_Rooms,Joined_Rooms
-from firstapp.forms import clientForm,Created_RoomsForm,Joined_RoomsForm
+from firstapp.models import Client#,Created_Rooms,Joined_Rooms
+from firstapp.forms import clientForm#,Created_RoomsForm,Joined_RoomsForm
 from firstapp.forms import UserForm
 # from django.template import RequestContext
 from django.contrib.auth import login,logout,authenticate
