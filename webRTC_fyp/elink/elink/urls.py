@@ -23,8 +23,8 @@ urlpatterns = [
     url(r'^host/$', views.special, name='host'),
 
     url(r'^logout/$', views.user_logout, name='logout'),
-    url(r'^create/$', views.C_Rooms, name='create'),
-    url(r'^join/$', views.J_Rooms, name='join'),
+#     url(r'^create/$', views.C_Rooms, name='create'),
+#     url(r'^join/$', views.J_Rooms, name='join'),
 
     url(r'^firstapp/',include('firstapp.urls')),
 ]
