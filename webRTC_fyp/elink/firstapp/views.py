@@ -123,37 +123,37 @@ def special(request):
 
 
 
-@login_required
-def C_Rooms(request):
+# @login_required
+# def C_Rooms(request):
 
-    c_rooms= Created_Rooms.objects.all()
-    # rname=c_rooms
-    form= Created_RoomsForm(request.POST or None)
-    if form.is_valid():
-        fs= form.save(commit=False)
-        fs.user= request.user
-        fs.save()
+#     c_rooms= Created_Rooms.objects.all()
+#     # rname=c_rooms
+#     form= Created_RoomsForm(request.POST or None)
+#     if form.is_valid():
+#         fs= form.save(commit=False)
+#         fs.user= request.user
+#         fs.save()
 
-    context= {'form': form,
-              'c_rooms': c_rooms,
-              }
+#     context= {'form': form,
+#               'c_rooms': c_rooms,
+#               }
 
-    return render(request, 'firstapp/createdRooms.html', context)
+#     return render(request, 'firstapp/createdRooms.html', context)
 
 
-@login_required
-def J_Rooms(request):
+# @login_required
+# def J_Rooms(request):
 
-    j_rooms= Joined_Rooms.objects.all()
-    # rname=c_rooms
-    form= Joined_RoomsForm(request.POST or None)
-    if form.is_valid():
-        fs= form.save(commit=False)
-        fs.user= request.user
-        fs.save()
+#     j_rooms= Joined_Rooms.objects.all()
+#     # rname=c_rooms
+#     form= Joined_RoomsForm(request.POST or None)
+#     if form.is_valid():
+#         fs= form.save(commit=False)
+#         fs.user= request.user
+#         fs.save()
 
-    context= {'form': form,
-              'j_rooms': j_rooms,
-              }
+#     context= {'form': form,
+#               'j_rooms': j_rooms,
+#               }
 
-    return render(request, 'firstapp/joinedrooms.html', context)
+#     return render(request, 'firstapp/joinedrooms.html', context)
